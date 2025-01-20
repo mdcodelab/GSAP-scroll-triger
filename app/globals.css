@@ -1,42 +1,62 @@
-:root {
+jtml, body {
   --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-a {
-  color: inherit;
+  margin: 0; padding: 0;
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+:root {
+  --backgroundColor: #FEF852;
+  --backgroundColorSecondary: #FFFC94;
+  --textPrimaryColor: #2A2A2A;
+  --headlineBig: clamp(3rem, 10vw, 15rem);
+  --headlineSmall: clamp(1rem, 1.2vw, 6rem);
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--backgroundColor);
+}
+
+.reveal {
+  background: var(--backgroundColor);
+  padding-left: 30%;
+  padding-right: 10%;
+}
+
+.reveal-text {
+  font-weight: 800;
+  font-size: var(--headlineBig);
+  line-height: var(--headlineBig);
+  color: var(--backgroundColor);
+  filter: drop-shadow(0 0 0.06rem rgb(2, 2, 2));
+}
+
+.spacing-small {
+  height: 50vh;
+}
+
+.spacing {
+  height: 100vh;
+}
+
+@media screen and (max-width: 500px) {
+  .reveal {
+    padding-left: 10px;
   }
 }
+
+
+
+
+
+.header-container {
+  border: 3px solid black;
+}
+
+.total {
+  background: orange;
+  width: 100%;
+  height: 100vh;
+}
+
+
